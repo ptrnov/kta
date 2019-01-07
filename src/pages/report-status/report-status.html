@@ -1,0 +1,61 @@
+  <ion-content padding class="content-body">
+        <div class="logo-input"></div>
+      <ion-grid class="grid-column">
+        <ion-row justify-content-center >
+            <ion-label class="label_1">
+              Status Aplikasi
+            </ion-label>
+        </ion-row>
+        <ion-row justify-content-right class="tgl" >
+            <ion-label class="label_2">
+              20/12/2018
+            </ion-label>
+        </ion-row>
+        <ion-row justify-content-left  class="position-label" >
+            <ion-label class="label_3">
+              Bussines Day
+            </ion-label>
+            <ion-label class="label_4">
+                : 20 day
+              </ion-label>
+        </ion-row>
+        <ion-row justify-content-left class="position-label">
+            <ion-label class="label_3">
+                Running Day
+            </ion-label>
+            <ion-label class="label_4">
+                : 20 day
+              </ion-label>
+        </ion-row>
+        <ion-row justify-content-left class="position-label">
+            <ion-label class="label_3">
+              Remaining Day
+            </ion-label>
+            <ion-label class="label_4">
+                : 20 day
+              </ion-label>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="grid-column">
+          <ion-list >
+              <ion-list >
+                  <ion-item class="data-item-list" *ngFor="let activity of timelinePic">
+                      <ion-avatar item-start>
+                          <img src={{activity.pic}} class="img">
+                      </ion-avatar>
+                      <h4>{{activity.nama}}</h4>
+                      <h4>Loan Id: {{activity.loan_id}}</h4>
+                      <h6>{{activity.applied_stt}} : {{activity.applied_date}} </h6>
+                      <button ion-button clear item-end (click)="btnview()">
+                        View
+                      </button>
+                  </ion-item>
+              </ion-list>
+          </ion-list>
+       </ion-grid>
+       <ion-row justify-content-right>
+          <ion-col col-12 class="posisi-tombol">
+            <button ion-button  (click)="kembali()" class="back"></button>
+          </ion-col>
+      </ion-row>
+  </ion-content>
