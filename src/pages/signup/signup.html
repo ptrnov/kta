@@ -8,7 +8,7 @@
           </ion-label>
         </ion-col>
     </ion-row>
-    <ion-row justify-content-center>
+    <ion-row justify-content-center class="row-content">
         <ion-col col-12 >
           <!-- Login form -->
           <form [formGroup]="todo" class="signup-form" (ngSubmit)="tambahUser(todo.value)">
@@ -32,29 +32,25 @@
                 <ion-item no-lines>
                   <ion-input formControlName="email"  type="text" placeholder="Email"></ion-input>
                 </ion-item>
-                <ion-item *ngIf="todo.get('email').errors && todo.get('email').dirty">
+                <ion-item no-lines *ngIf="todo.get('email').errors && todo.get('email').dirty">
                     <p color="primary" ion-text *ngIf="todo.get('email').hasError('required')">Required</p>
                 </ion-item>
 
-                <ion-item no-lines>
+                <!-- <ion-item no-lines>
                   <ion-input formControlName="username" type="text" placeholder="Username" class="ion_input"></ion-input>
                 </ion-item>
                 <ion-item no-lines *ngIf="todo.get('username').errors && todo.get('username').dirty">
                     <p color="primary" ion-text *ngIf="todo.get('nama').hasError('required')">Required</p>
-                </ion-item>
+                </ion-item> -->
 
-                <ion-item no-lines>
-                  <!-- <ion-label floating>
-                    <ion-icon name="lock" item-start class="text-primary"></ion-icon>Password
-                  </ion-label> -->
-                  <ion-input no-lines formControlName="password" type="password" placeholder="Password"></ion-input>
-                  <!-- <ion-input type="text" [(ngModel)]="todo.password" name="password"></ion-input> -->
+                <!-- <ion-item no-lines>
+                 <ion-input no-lines formControlName="password" type="password" placeholder="Password"></ion-input>
                 </ion-item>
                 <ion-item *ngIf="todo.get('password').errors && todo.get('password').dirty">
                     <p color="primary" ion-text *ngIf="todo.get('password').hasError('required')">Required</p>
-                </ion-item>
+                </ion-item> -->
 
-                <ion-item>
+                <ion-item class="content-item">
                     <ion-input type="hidden" formControlName="img_ktp" [(ngModel)]="pic_ktp"></ion-input>
                     <ion-input type="hidden" formControlName="img_ktp_selfie" [(ngModel)]="pic_ktp_selfie"></ion-input>
                     <ion-input type="hidden" formControlName="img_npwp" [(ngModel)]="pic_npwp"></ion-input>
@@ -115,7 +111,7 @@
               </button>
             </ion-list>
             <ion-item margin-bottom>
-                <button ion-button color="primary"
+                <button ion-button color="primary" class="tombol-submit"
                   text-center
                   block
                   [disabled]="!todo.valid">Submit</button>

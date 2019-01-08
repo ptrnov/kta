@@ -26,12 +26,12 @@ page-signup-authentication {
     // height: 26px;
   }
   .hdr-lbl1{
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
     margin-left: 15px;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 400;
-    color: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
   }
   .hdr-lbl2{
@@ -39,39 +39,44 @@ page-signup-authentication {
     margin-left: 15px;
     font-size: 15px;
     font-weight: 400;
-    color: #8D9091;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
+    white-space:inherit;
   }
   .hdr-lbl3{
     text-align: center;
     margin-left: 15px;
     font-size: 15px;
     font-weight: 400;
-    color: #8D9091;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
-    white-space: inherit;
+    // white-space:pre-wrap;
   }
   .hdr-lbl4{
     text-align: center;
     margin-left: 15px;
     font-size: 15px;
     font-weight: 400;
-    color: #8D9091;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   .key-button{
-    margin-top: 30px;
+    .btn{
+      background: #8D9091;
+      border-radius: 5px 5px 5px 5px;
+    }
+    .tombol-jarak{
+      margin-left: 41px;
+    }
+    .icon-back-hapus{
+      width: 37px;
+      text-align: center;
+      font-size:2.2rem;
+      font-weight: normal;
+   }
   }
-  .icon-back-hapus{
-     width: 37px;
-    text-align: center;
-    font-size:2.2rem;
-    font-weight: normal;
-  }
-  .tombol-jarak{
-    margin-left: 41px;
-  }
+
 
   .box-auth{
     padding: 0px 0px 10px 10px;
