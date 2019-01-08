@@ -81,4 +81,27 @@ page-load-datatambahan-pernyataan {
       background-color:rgb(241, 238, 31) !important;
     }
   }
+
+  .hdr-lbl{
+    text-align: center;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .content-lbl{
+    text-align: justify;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #8D9091;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: inherit;
+  }
+
+  .button{
+    margin-bottom: 50px;
+  }
+
 }
