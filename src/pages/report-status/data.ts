@@ -3,9 +3,9 @@ export let getDataCustomer = [
     date: new Date(),
     loan_id: "12345",
     nama:"Piter Novian",
-    applied_stt: "Caclel",
+    applied_stt: "Cancel",
     applied_date: "18/11/2018",
-    pic: "assets/imgs/titok.jpg",
+    pic: "assets/imgs/loan1.jpg",
   },
   {
     date: new Date(),
@@ -13,7 +13,7 @@ export let getDataCustomer = [
     nama:"Bagus",
     applied_stt: "Reject",
     applied_date: "18/11/2018",
-    pic: "assets/imgs/titok.jpg",
+    pic: "assets/imgs/loan2.jpg",
   },
   {
     date: new Date(),
@@ -21,7 +21,7 @@ export let getDataCustomer = [
     nama:"Ginanjar",
     applied_stt: "Disbursed",
     applied_date: "18/11/2018",
-    pic: "assets/imgs/titok.jpg",
+    pic: "assets/imgs/loan3.jpg",
   },
   {
     date: new Date(),
@@ -29,6 +29,6 @@ export let getDataCustomer = [
     nama:"Tyo",
     applied_stt: "Disbursed",
     applied_date: "18/11/2018",
-    pic: "assets/imgs/titok.jpg",
+    pic: "assets/imgs/loan4.jpg",
   }
 ];

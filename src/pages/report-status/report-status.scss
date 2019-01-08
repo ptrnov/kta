@@ -15,6 +15,9 @@ page-report-status {
 
   }
 
+  [padding] h1:first-child, page-report-status [padding] h2:first-child, page-report-status [padding] h3:first-child, page-report-status [padding] h4:first-child, page-report-status [padding] h5:first-child, page-report-status [padding] h6:first-child {
+    margin-top: 0.7rem;
+}
   .data-item-list{
     border-radius: 11px 11px 11px 11px;
     border: 1px solid #8D9091;
