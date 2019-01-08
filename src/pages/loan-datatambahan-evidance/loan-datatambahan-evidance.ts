@@ -4,7 +4,7 @@ import { IonicPage,Platform,NavController,NavParams,ToastController,Events } fro
 import { Camera,CameraOptions } from '@ionic-native/camera';
 import { DatePicker } from '@ionic-native/date-picker';
 import { Base64 } from '@ionic-native/base64';
-import { LoadDatatambahanAsuransiPage } from '../../pages/load-datatambahan-asuransi/load-datatambahan-asuransi';
+import { LoanDatatambahanAsuransiPage } from '../../pages/loan-datatambahan-asuransi/loan-datatambahan-asuransi';
 
 
 @IonicPage()
@@ -108,7 +108,7 @@ export class LoanDatatambahanEvidancePage {
 
   public evidance(){
     // this.navCtrl.push(LoanDatatambahanEvidancePage);
-    this.navCtrl.setRoot(LoadDatatambahanAsuransiPage);
+    this.navCtrl.setRoot(LoanDatatambahanAsuransiPage);
   }
 
 }

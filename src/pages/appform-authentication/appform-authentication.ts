@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { timeout } from 'rxjs/operator/timeout';
+import {LoanDatatambahanMessagePage } from '../../pages/loan-datatambahan-message/loan-datatambahan-message'
 
 
 let passcode="";
@@ -24,6 +25,11 @@ export class AppformAuthenticationPage {
     console.log('ionViewDidLoad AppformAuthenticationPage');
   }
 
+  ionViewDidLeave() {
+    console.log("ionViewDidLeave TabsPage");
+    // this.navCtrl.popToRoot();
+    // this.navCtrl.pop();
+  }
   public add(value){
 
      if(passcode.length < 6) {
@@ -37,6 +43,7 @@ export class AppformAuthenticationPage {
       if(passcode.length == 6) {
           setTimeout(() => {
             console.log("The four digit code was entered");
+            this.navCtrl.setRoot(LoanDatatambahanMessagePage);
           }, 500);
       }
      console.log(passcode);
@@ -51,26 +58,7 @@ export class AppformAuthenticationPage {
     this.no3=passcode.substring(3,4);
     this.no4=passcode.substring(4,5);
     this.no5=passcode.substring(5,6);
-      // if(passcode.substring(5,6)){
-      //   passcode=this.replaceIfSubstring(passcode,passcode.substring(5,6));
-      //   this.no5="";
-      // }else if(passcode.substring(4,5)){
-      //   passcode=this.replaceIfSubstring(passcode,passcode.substring(4,5));
-      //   this.no4="";
-      // }else if(passcode.substring(3,4)){
-      //   passcode=this.replaceIfSubstring(passcode,passcode.substring(3,4));
-      //   this.no3="";
-      // }else if(passcode.substring(2,3)){
-      //   passcode=this.replaceIfSubstring(passcode,passcode.substring(2,3));
-      //   this.no2="";
-      // }else if(passcode.substring(1,2)){
-      //   passcode=this.replaceIfSubstring(passcode,passcode.substring(1,2));
-      //   this.no1="";
-      // }else if(passcode.substring(0,1)){
-      //   passcode=this.replaceIfSubstring(passcode,passcode.substring(0,1));
-      //   this.no0="";
-      // }
-     console.log(passcode);
+    console.log(passcode);
   }
 
 
@@ -81,5 +69,7 @@ export class AppformAuthenticationPage {
     } else {
         return original;
     }
-}
+  }
+
+
 }

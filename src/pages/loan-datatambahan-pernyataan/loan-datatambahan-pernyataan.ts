@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AppformAuthenticationPage } from '../../pages/appform-authentication/appform-authentication';
+
 @IonicPage()
 @Component({
-  selector: 'page-load-datatambahan-pernyataan',
-  templateUrl: 'load-datatambahan-pernyataan.html',
+  selector: 'page-loan-datatambahan-pernyataan',
+  templateUrl: 'loan-datatambahan-pernyataan.html',
 })
-export class LoadDatatambahanPernyataanPage {
+export class LoanDatatambahanPernyataanPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

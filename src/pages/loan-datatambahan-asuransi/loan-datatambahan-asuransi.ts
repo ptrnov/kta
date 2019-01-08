@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoadDatatambahanPernyataanPage } from '../../pages/load-datatambahan-pernyataan/load-datatambahan-pernyataan';
+import { LoanDatatambahanPernyataanPage } from '../../pages/loan-datatambahan-pernyataan/loan-datatambahan-pernyataan';
   import { from } from 'rxjs/observable/from';
 
 @IonicPage()
 @Component({
-  selector: 'page-load-datatambahan-asuransi',
-  templateUrl: 'load-datatambahan-asuransi.html',
+  selector: 'page-loan-datatambahan-asuransi',
+  templateUrl: 'loan-datatambahan-asuransi.html',
 })
-export class LoadDatatambahanAsuransiPage {
+export class LoanDatatambahanAsuransiPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -19,7 +19,7 @@ export class LoadDatatambahanAsuransiPage {
 
   public pernyataan(){
     // this.navCtrl.push(LoanDatatambahanEvidancePage);
-    this.navCtrl.setRoot(LoadDatatambahanPernyataanPage);
+    this.navCtrl.setRoot(LoanDatatambahanPernyataanPage);
   }
 
 }

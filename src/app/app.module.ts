@@ -44,10 +44,17 @@ import { PrdinfoCrossellscrloanPage} from '../pages/prdinfo-crossellscrloan/prdi
 import { PrdinfoCrossellntpPage} from '../pages/prdinfo-crossellntp/prdinfo-crossellntp';
 import { PrdinfoCrossellntbPage} from '../pages/prdinfo-crossellntb/prdinfo-crossellntb';
 import { LoanDatatambahanEvidancePage } from '../pages/loan-datatambahan-evidance/loan-datatambahan-evidance';
-import { LoadDatatambahanAsuransiPage } from '../pages/load-datatambahan-asuransi/load-datatambahan-asuransi'
-import { LoadDatatambahanPernyataanPage } from '../pages/load-datatambahan-pernyataan/load-datatambahan-pernyataan';
+import { LoanDatatambahanAsuransiPage } from '../pages/loan-datatambahan-asuransi/loan-datatambahan-asuransi'
+import { LoanDatatambahanPernyataanPage } from '../pages/loan-datatambahan-pernyataan/loan-datatambahan-pernyataan';
 import { AppformAuthenticationPage } from '../pages/appform-authentication/appform-authentication';
-
+import { SignupAuthenticationPage } from '../pages/signup-authentication/signup-authentication';
+import { SignupMessagePage } from '../pages/signup-message/signup-message';
+import { LoanDatatambahanMessagePage } from '../pages/loan-datatambahan-message/loan-datatambahan-message';
+import { Etraining1Page } from '../pages/etraining1/etraining1';
+import { Etraining2Page } from '../pages/etraining2/etraining2';
+import { Etraining3Page } from '../pages/etraining3/etraining3';
+import { Etraining4Page } from '../pages/etraining4/etraining4';
+import { Etraining4MessagePage } from '../pages/etraining4-message/etraining4-message';
 @NgModule({
   declarations: [
     MyApp,
@@ -78,9 +85,17 @@ import { AppformAuthenticationPage } from '../pages/appform-authentication/appfo
     PrdinfoCrossellntpPage,
     PrdinfoCrossellntbPage,
     LoanDatatambahanEvidancePage,
-    LoadDatatambahanAsuransiPage,
-    LoadDatatambahanPernyataanPage,
-    AppformAuthenticationPage
+    LoanDatatambahanAsuransiPage,
+    LoanDatatambahanPernyataanPage,
+    AppformAuthenticationPage,
+    SignupAuthenticationPage,
+    SignupMessagePage,
+    LoanDatatambahanMessagePage,
+    Etraining1Page,
+    Etraining2Page,
+    Etraining3Page,
+    Etraining4Page,
+    Etraining4MessagePage
   ],
   imports: [
     BrowserModule,
@@ -130,9 +145,17 @@ import { AppformAuthenticationPage } from '../pages/appform-authentication/appfo
     PrdinfoCrossellntpPage,
     PrdinfoCrossellntbPage,
     LoanDatatambahanEvidancePage,
-    LoadDatatambahanAsuransiPage,
-    LoadDatatambahanPernyataanPage,
-    AppformAuthenticationPage
+    LoanDatatambahanAsuransiPage,
+    LoanDatatambahanPernyataanPage,
+    AppformAuthenticationPage,
+    SignupAuthenticationPage,
+    SignupMessagePage,
+    LoanDatatambahanMessagePage,
+    Etraining1Page,
+    Etraining2Page,
+    Etraining3Page,
+    Etraining4Page,
+    Etraining4MessagePage
   ],
   providers: [
     StatusBar,

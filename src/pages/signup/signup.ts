@@ -7,7 +7,7 @@ import { DatePicker } from '@ionic-native/date-picker';
 import { Base64 } from '@ionic-native/base64';
 import { RestProvider } from '../../providers/rest/rest';
 import { WelcomePage } from "../welcome/welcome";
-
+import { SignupAuthenticationPage } from '../../pages/signup-authentication/signup-authentication';
 @IonicPage()
 @Component({
   selector: 'page-signup',
@@ -102,15 +102,19 @@ export class SignupPage {
     //   //alert('message' + msq);
     //   console.log(msq);
     // });
-    this.rest.postData('signup',JSON.stringify(data)).then((rslt:any)=>{
-      let toasPic = this.toastCtrl.create({
-        message: 'Berhasil dikirim',
-        duration: 3000,
-        position: 'middle'
-      });
-      toasPic.present();
-      console.log("data image=",rslt);
-    });
+
+    // this.rest.postData('signup',JSON.stringify(data)).then((rslt:any)=>{
+    //   let toasPic = this.toastCtrl.create({
+    //     message: 'Berhasil dikirim',
+    //     duration: 3000,
+    //     position: 'middle'
+    //   });
+    //   toasPic.present();
+    //   console.log("data image=",rslt);
+    // });
+
+    this.navCtrl.setRoot(SignupAuthenticationPage);
+
   }
 
   ionViewDidLoad() {
