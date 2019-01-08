@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoadDatatambahanPernyataanPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { AppformAuthenticationPage } from '../../pages/appform-authentication/appform-authentication';
 @IonicPage()
 @Component({
   selector: 'page-load-datatambahan-pernyataan',
@@ -22,4 +15,8 @@ export class LoadDatatambahanPernyataanPage {
     console.log('ionViewDidLoad LoadDatatambahanPernyataanPage');
   }
 
+  public formAuth(){
+    // this.navCtrl.push(LoanDatatambahanEvidancePage);
+    this.navCtrl.setRoot(AppformAuthenticationPage);
+  }
 }

@@ -46,7 +46,7 @@ import { PrdinfoCrossellntbPage} from '../pages/prdinfo-crossellntb/prdinfo-cros
 import { LoanDatatambahanEvidancePage } from '../pages/loan-datatambahan-evidance/loan-datatambahan-evidance';
 import { LoadDatatambahanAsuransiPage } from '../pages/load-datatambahan-asuransi/load-datatambahan-asuransi'
 import { LoadDatatambahanPernyataanPage } from '../pages/load-datatambahan-pernyataan/load-datatambahan-pernyataan';
-
+import { AppformAuthenticationPage } from '../pages/appform-authentication/appform-authentication';
 
 @NgModule({
   declarations: [
@@ -79,7 +79,8 @@ import { LoadDatatambahanPernyataanPage } from '../pages/load-datatambahan-perny
     PrdinfoCrossellntbPage,
     LoanDatatambahanEvidancePage,
     LoadDatatambahanAsuransiPage,
-    LoadDatatambahanPernyataanPage
+    LoadDatatambahanPernyataanPage,
+    AppformAuthenticationPage
   ],
   imports: [
     BrowserModule,
@@ -130,7 +131,8 @@ import { LoadDatatambahanPernyataanPage } from '../pages/load-datatambahan-perny
     PrdinfoCrossellntbPage,
     LoanDatatambahanEvidancePage,
     LoadDatatambahanAsuransiPage,
-    LoadDatatambahanPernyataanPage
+    LoadDatatambahanPernyataanPage,
+    AppformAuthenticationPage
   ],
   providers: [
     StatusBar,

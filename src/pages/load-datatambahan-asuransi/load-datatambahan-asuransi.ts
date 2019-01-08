@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoadDatatambahanAsuransiPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { LoadDatatambahanPernyataanPage } from '../../pages/load-datatambahan-pernyataan/load-datatambahan-pernyataan';
+  import { from } from 'rxjs/observable/from';
 
 @IonicPage()
 @Component({
@@ -20,6 +15,11 @@ export class LoadDatatambahanAsuransiPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoadDatatambahanAsuransiPage');
+  }
+
+  public pernyataan(){
+    // this.navCtrl.push(LoanDatatambahanEvidancePage);
+    this.navCtrl.setRoot(LoadDatatambahanPernyataanPage);
   }
 
 }
