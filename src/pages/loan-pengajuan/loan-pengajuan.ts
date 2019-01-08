@@ -52,7 +52,8 @@ export class LoanPengajuanPage {
       if(activeView.name === 'LoanPengajuanPage') {
           if (nav.canGoBack()){}else{
             // this.navCtrl.push(AppformPage);
-            this.navCtrl.setRoot(AppformPage);
+            // this.navCtrl.setRoot(AppformPage);
+            this.app.getRootNav().setRoot(AppformPage);
           }
           console.log("back=",activeView.name);
       }
