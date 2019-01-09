@@ -60,15 +60,16 @@ page-appform-authentication {
   }
 
   .box-auth{
-    padding: 0px 0px 10px 10px;
+    padding: 0px 0px 0px 0px;
     border-radius: 10%;
     border: 2px solid #8D9091;
     text-align: center;
-    margin: 2px;
-    width: 50px;
+    margin-left: 2px;
+    width: 40px;
     height: 20px;
     .lbl{
-      padding: 0px 0px 0px 0px;
+      margin-left: 2px;
+      margin-right: -10px;
       margin-top: 7px;
       font-size: 20px;
       font-weight: 900;

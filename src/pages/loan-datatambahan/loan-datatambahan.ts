@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage,Platform,NavController,NavParams,ToastController,Events } from 'ionic-angular';
+import { IonicPage,App,Platform,NavController,NavParams,ToastController,Events } from 'ionic-angular';
 import { Camera,CameraOptions } from '@ionic-native/camera';
 import { DatePicker } from '@ionic-native/date-picker';
 import { Base64 } from '@ionic-native/base64';
@@ -42,8 +42,21 @@ export class LoanDatatambahanPage {
     private camera: Camera,
     public toastCtrl: ToastController,
     private datePicker: DatePicker,
-    private base64: Base64
+    private base64: Base64,
+    public app: App
   ) {
+    this.platform.registerBackButtonAction(() => {
+      let nav = this.app.getActiveNavs()[0];
+      let activeView = nav.getActive();
+      // Checks if can go back before show up the alert
+      if(activeView.name === 'LoanDatatambahanPage') {
+          if (nav.canGoBack()){}else{
+            // this.tabRef.select(0);
+            this.navCtrl.parent.select(3);
+          }
+          console.log("back=",activeView.name);
+      }
+    });
   }
 
   ionViewDidLoad() {

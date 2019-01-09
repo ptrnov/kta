@@ -21,15 +21,10 @@ export class AppformAuthenticationPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AppformAuthenticationPage');
+  ngOnInit() {
+    passcode = "";
   }
 
-  ionViewDidLeave() {
-    console.log("ionViewDidLeave TabsPage");
-    // this.navCtrl.popToRoot();
-    // this.navCtrl.pop();
-  }
   public add(value){
 
      if(passcode.length < 6) {

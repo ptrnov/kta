@@ -1,12 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { IonicPage, Platform,App,NavController, NavParams,Tabs } from 'ionic-angular';
 
-/**
- * Generated class for the LoanDatadiriPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -14,6 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'loan-datadiri.html',
 })
 export class LoanDatadiriPage {
+  @ViewChild('myTabs') tabRef:Tabs;
   serialDataDiri = {
     "data_diri":{
       "nama_lengkap_ktp": "",
@@ -41,7 +37,24 @@ export class LoanDatadiriPage {
       "perjanjian_pisah_harta": ""
     }
   };
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public platform:Platform,
+    public app:App
+  ) {
+    this.platform.registerBackButtonAction(() => {
+      let nav = this.app.getActiveNavs()[0];
+      let activeView = nav.getActive();
+      // Checks if can go back before show up the alert
+      if(activeView.name === 'LoanDatadiriPage') {
+          if (nav.canGoBack()){}else{
+            // this.tabRef.select(0);
+            this.navCtrl.parent.select(0);
+          }
+          console.log("back=",activeView.name);
+      }
+    });
   }
 
   ionViewDidLoad() {

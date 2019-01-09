@@ -35,6 +35,10 @@ export class LoanPage {
             this.navCtrl.push(AppformPage);
           }
           console.log("back=",activeView.name);
+      }else if(activeView.name === 'LoanPengajuanPage'){
+        if (nav.canGoBack()){}else{
+          this.tabRef.select(0);
+        }
       }
     });
 

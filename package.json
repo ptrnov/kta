@@ -48,6 +48,7 @@
     "cordova-plugin-x-toast": "^2.7.0",
     "cordova-sqlite-storage": "^2.1.4",
     "cordova-windows": "6.0.1",
+    "highcharts": "^7.0.1",
     "ionic-angular": "3.9.2",
     "ionic-plugin-keyboard": "^2.2.1",
     "ionic-select-searchable": "^2.10.0",
