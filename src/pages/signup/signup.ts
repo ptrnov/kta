@@ -103,17 +103,17 @@ export class SignupPage {
     //   console.log(msq);
     // });
 
-    this.rest.postData('signup',JSON.stringify(data)).then((rslt:any)=>{
-      let toasPic = this.toastCtrl.create({
-        message: 'Berhasil dikirim',
-        duration: 3000,
-        position: 'middle'
-      });
-      toasPic.present();
-      console.log("data image=",rslt);
-    });
+    // this.rest.postData('signup',JSON.stringify(data)).then((rslt:any)=>{
+    //   let toasPic = this.toastCtrl.create({
+    //     message: 'Berhasil dikirim',
+    //     duration: 3000,
+    //     position: 'middle'
+    //   });
+    //   toasPic.present();
+    //   console.log("data image=",rslt);
+    // });
 
-    // this.navCtrl.setRoot(SignupAuthenticationPage);
+    this.navCtrl.setRoot(SignupAuthenticationPage);
 
   }
 

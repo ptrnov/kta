@@ -8,6 +8,7 @@ import { LoanDatatambahanEvidancePage } from '../../pages/loan-datatambahan-evid
   templateUrl: 'loan-datatambahan-asuransi.html',
 })
 export class LoanDatatambahanAsuransiPage {
+  stt_pernyataan=true;
 
   constructor(
     public navCtrl: NavController,
@@ -30,8 +31,13 @@ export class LoanDatatambahanAsuransiPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoadDatatambahanAsuransiPage');
+  public pilihChecked(nilai) {
+    console.log("nilai=",nilai.checked);
+    if (nilai.checked==true) {
+      this.stt_pernyataan = false;
+    }else{
+      this.stt_pernyataan = true;
+    }
   }
 
   public pernyataan(){

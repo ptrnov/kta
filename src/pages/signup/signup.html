@@ -30,7 +30,7 @@
                 </ion-item>
 
                 <ion-item no-lines>
-                  <ion-input formControlName="email"  type="text" placeholder="Email"></ion-input>
+                  <ion-input formControlName="email"  type="email" placeholder="Email"></ion-input>
                 </ion-item>
                 <ion-item no-lines *ngIf="todo.get('email').errors && todo.get('email').dirty">
                     <p color="primary" ion-text *ngIf="todo.get('email').hasError('required')">Required</p>
@@ -82,7 +82,7 @@
                   <ion-row id="id-ktp-selfie" (click)="ambilPhoto($event)">
                     <img src="assets/imgs/camera.png" alt="submit" class="icon" />
                     <ion-label class="garis-vertical">|</ion-label>
-                    <ion-label class="btn-lbl">Selfie with KTP</ion-label>
+                    <ion-label class="btn-lbl">Selfie</ion-label>
                   </ion-row>
               </button>
 
@@ -94,7 +94,7 @@
                   <ion-row id="id-npwp" (click)="ambilPhoto($event)">
                     <img src="assets/imgs/camera.png" alt="submit" class="icon" />
                     <ion-label class="garis-vertical">|</ion-label>
-                    <ion-label class="btn-lbl">NPWP</ion-label>
+                    <ion-label class="btn-lbl">Diploma/Transcript</ion-label>
                   </ion-row>
               </button>
 
@@ -102,7 +102,7 @@
                   <img id="id-selfie-thum" class="label" src="assets/imgs/pic.png">
                   <!-- <ion-input id="id-selfie-thum" type="image" formControlName="img_selfie" [(ngModel)]="pic_selfie" src="assets/imgs/pic.png"></ion-input> -->
               </ion-item>
-              <button class="tombol" type="button">
+              <button [hidden]=true class="tombol" type="button">
                   <ion-row id="id-selfie" (click)="ambilPhoto($event)">
                     <img src="assets/imgs/camera.png" alt="submit" class="icon" />
                     <ion-label class="garis-vertical">|</ion-label>
