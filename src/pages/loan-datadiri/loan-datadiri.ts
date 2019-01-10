@@ -1,7 +1,6 @@
 import { Component,ViewChild } from '@angular/core';
-import { IonicPage, Platform,App,NavController, NavParams,Tabs } from 'ionic-angular';
-
-
+import { IonicPage, Platform,App,NavController, NavParams,Tabs,Events } from 'ionic-angular';
+import { getKota,getKodepos} from "./data";
 
 @IonicPage()
 @Component({
@@ -10,6 +9,11 @@ import { IonicPage, Platform,App,NavController, NavParams,Tabs } from 'ionic-ang
 })
 export class LoanDatadiriPage {
   @ViewChild('myTabs') tabRef:Tabs;
+
+  aryKota;
+  aryKodepos;
+  kodepos;
+
   serialDataDiri = {
     "data_diri":{
       "nama_lengkap_ktp": "",
@@ -41,8 +45,12 @@ export class LoanDatadiriPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public platform:Platform,
-    public app:App
+    public app:App,
+    public events: Events
   ) {
+    this.aryKota=getKota;
+    console.log("payah=",getKota);
+    this.aryKodepos=getKodepos;
     this.platform.registerBackButtonAction(() => {
       let nav = this.app.getActiveNavs()[0];
       let activeView = nav.getActive();
@@ -57,6 +65,16 @@ export class LoanDatadiriPage {
     });
   }
 
+  public kotaChange(event: Event){
+
+    var kodeposX=[];
+    console.log("klota=",this.aryKodepos);
+    kodeposX.push(this.aryKodepos.filter(function(obj){
+      return obj.id==event;
+    }));
+    console.log("klota=",kodeposX);
+    this.kodepos=kodeposX[0];
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoanDatadiriPage');
   }

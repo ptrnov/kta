@@ -12,7 +12,7 @@ import { TaskHistoryPage } from '../../pages/task-history/task-history';
   templateUrl: 'app-task.html'
 })
 export class AppTaskPage {
-  @ViewChild('tabMyTask') tabRef:Tabs;
+  @ViewChild('tabTask') tabRef:Tabs;
 
   taskListRoot = TaskListPage;
   taskDraftRoot = TaskDraftPage;

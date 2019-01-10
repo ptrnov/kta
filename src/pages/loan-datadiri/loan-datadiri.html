@@ -121,9 +121,11 @@
             <ion-label floating >
              Kota
             </ion-label>
-            <ion-select cancelText="Cancel" okText="OK" [(ngModel)]="serialDataDiri.data_diri.kota">
-              <ion-option value="yes" selected="true">Yes</ion-option>
-              <ion-option value="no">No</ion-option>
+            <ion-select cancelText="Cancel" okText="OK" [(ngModel)]="serialDataDiri.data_diri.kota" (ionChange)="kotaChange($event)">
+                <ion-option *ngFor="let item of aryKota" value="{{item.id}}">
+                {{item.kota}}</ion-option>
+              <!-- <ion-option value="yes" selected="true">Yes</ion-option>
+              <ion-option value="no">No</ion-option> -->
           </ion-select>
         </ion-item>
         <ion-item>
@@ -131,9 +133,9 @@
              Kode pos
             </ion-label>
             <ion-select cancelText="Cancel" okText="OK" [(ngModel)]="serialDataDiri.data_diri.kodepos">
-              <ion-option value="yes" selected="true">Yes</ion-option>
-              <ion-option value="no">No</ion-option>
-          </ion-select>
+                <ion-option *ngFor="let item1 of kodepos" value="{{item1.kode}}">
+                    {{item1.kode}}</ion-option>
+           </ion-select>
         </ion-item>
         <ion-item>
             <ion-label floating >

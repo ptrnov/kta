@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, Platform,App,NavController, NavParams } from 'ionic-angular';
+import { getKota,getKodepos} from "./data";
 
 @IonicPage()
 @Component({
@@ -7,6 +8,10 @@ import { IonicPage, Platform,App,NavController, NavParams } from 'ionic-angular'
   templateUrl: 'loan-pekerjaan-penghasilan.html',
 })
 export class LoanPekerjaanPenghasilanPage {
+  aryKota;
+  aryKodepos;
+  kodepos;
+
   serialDataPenghasilan = {
     "data_penghasilan":{
       "pekerjaan": "",
@@ -31,6 +36,10 @@ export class LoanPekerjaanPenghasilanPage {
     public platform:Platform,
     public app:App
   ) {
+    this.aryKota=getKota;
+    console.log("payah=",getKota);
+    this.aryKodepos=getKodepos;
+
     this.platform.registerBackButtonAction(() => {
       let nav = this.app.getActiveNavs()[0];
       let activeView = nav.getActive();
@@ -45,8 +54,15 @@ export class LoanPekerjaanPenghasilanPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoanPekerjaanPenghasilanPage');
+  public kotaChange(event: Event){
+
+    var kodeposX=[];
+    console.log("klota=",this.aryKodepos);
+    kodeposX.push(this.aryKodepos.filter(function(obj){
+      return obj.id==event;
+    }));
+    console.log("klota=",kodeposX);
+    this.kodepos=kodeposX[0];
   }
 
   btnNext() {

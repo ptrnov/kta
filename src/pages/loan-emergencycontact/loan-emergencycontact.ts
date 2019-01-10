@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, Platform,App,NavController, NavParams } from 'ionic-angular';
+import { getKota,getKodepos} from "./data";
 
 @IonicPage()
 @Component({
@@ -7,6 +8,9 @@ import { IonicPage, Platform,App,NavController, NavParams } from 'ionic-angular'
   templateUrl: 'loan-emergencycontact.html',
 })
 export class LoanEmergencycontactPage {
+  aryKota;
+  aryKodepos;
+  kodepos;
 
   serialDataEmergency = {
     "data_emergency":{
@@ -26,6 +30,10 @@ export class LoanEmergencycontactPage {
     public platform:Platform,
     public app:App
   ) {
+    this.aryKota=getKota;
+    console.log("payah=",getKota);
+    this.aryKodepos=getKodepos;
+
     this.platform.registerBackButtonAction(() => {
       let nav = this.app.getActiveNavs()[0];
       let activeView = nav.getActive();
@@ -40,8 +48,15 @@ export class LoanEmergencycontactPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoanEmergencycontactPage');
+  public kotaChange(event: Event){
+
+    var kodeposX=[];
+    console.log("klota=",this.aryKodepos);
+    kodeposX.push(this.aryKodepos.filter(function(obj){
+      return obj.id==event;
+    }));
+    console.log("klota=",kodeposX);
+    this.kodepos=kodeposX[0];
   }
 
   btnNext() {
