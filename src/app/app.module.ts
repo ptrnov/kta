@@ -55,6 +55,13 @@ import { Etraining2Page } from '../pages/etraining2/etraining2';
 import { Etraining3Page } from '../pages/etraining3/etraining3';
 import { Etraining4Page } from '../pages/etraining4/etraining4';
 import { Etraining4MessagePage } from '../pages/etraining4-message/etraining4-message';
+import { AppTaskPage } from '../pages/app-task/app-task';
+import { TaskListPage } from '../pages/task-list/task-list';
+import { TaskHistoryPage } from '../pages/task-history/task-history';
+import { TaskDraftPage } from '../pages/task-draft/task-draft';
+import { LoanCalcPage } from '../pages/loan-calc/loan-calc';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -95,7 +102,12 @@ import { Etraining4MessagePage } from '../pages/etraining4-message/etraining4-me
     Etraining2Page,
     Etraining3Page,
     Etraining4Page,
-    Etraining4MessagePage
+    Etraining4MessagePage,
+    AppTaskPage,
+    TaskListPage,
+    TaskHistoryPage,
+    TaskDraftPage,
+    LoanCalcPage
   ],
   imports: [
     BrowserModule,
@@ -155,7 +167,12 @@ import { Etraining4MessagePage } from '../pages/etraining4-message/etraining4-me
     Etraining2Page,
     Etraining3Page,
     Etraining4Page,
-    Etraining4MessagePage
+    Etraining4MessagePage,
+    AppTaskPage,
+    TaskListPage,
+    TaskHistoryPage,
+    TaskDraftPage,
+    LoanCalcPage
   ],
   providers: [
     StatusBar,

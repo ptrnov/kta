@@ -28,7 +28,7 @@ body{
 }
 
 .logo-input{
-  background-image: url(../assets/imgs/OCBC_NISP_logo.png);
+    background-image: url(../assets/imgs/OCBC_NISP_logo.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 150px;
@@ -38,7 +38,17 @@ body{
     margin-left: -20px;
     text-align: right;
 }
-
+.kalkulator{
+  background-image: url(../assets/imgs/calculator.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color:transparent;
+  background-size: 57px;
+  height: 15vw;
+  width: 127%;
+  text-align: right;
+  margin-top: -42px;
+}
 .title-toolbar{
   font-size: 4vw;
   font-family:"Arial Black";
