@@ -1,18 +1,28 @@
-<!--
-  Generated template for the TaskDraftPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Task Draft</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content padding class="content-body">
+    <ion-grid class="grid-column">
+      <ion-list >
+          <ion-list >
+              <ion-item class="data-item-list" *ngFor="let activity of timelinePic">
+                <ion-row>
+                  <ion-col col-3>
+                        <ion-avatar item-start>
+                            <img src={{activity.pic}} class="img">
+                        </ion-avatar>
+                    </ion-col>
+                  <ion-col col-6>
+                        <h4 style="margin-top: 0.7rem">{{activity.nama}}</h4>
+                        <h4   >Loan Id: {{activity.loan_id}}</h4>
+                        <h6 style="margin-top: 0.7rem">{{activity.applied_stt}} : {{activity.applied_date}} </h6>
+                  </ion-col>
+                  <ion-col col-3>
+                    <!-- <button ion-button clear item-end (click)="btnview()">
+                      View
+                    </button> -->
+                    <button ion-button (click)="btnview()" class="tombol-detail"></button>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+          </ion-list>
+      </ion-list>
+   </ion-grid>
 </ion-content>

@@ -7,6 +7,7 @@ import { RestProvider } from '../../providers/rest/rest';
 // import { LoanPage } from '../../pages/loan/loan';
 import { AppformPage } from '../../pages/appform/appform';
 import { AppReportPage,} from '../../pages/app-report/app-report';
+import { AppTaskPage } from '../../pages/app-task/app-task';
 import { AppProductPage} from '../../pages/app-product/app-product';
 class Port {
   public id: number;
@@ -111,6 +112,10 @@ userProfile=[];
   }
   public appProduct(){
     this.navCtrl.setRoot(AppProductPage);
+  }
+
+  public mytask(){
+    this.navCtrl.setRoot(AppTaskPage);
   }
 
   public laporan(){

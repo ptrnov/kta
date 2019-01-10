@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams,App, Platform,Tabs,Events,AlertController } from 'ionic-angular';
+import { HomePage } from '../../pages/home/home';
+import { TaskListPage } from '../../pages/task-list/task-list';
+import { TaskDraftPage } from '../../pages/task-draft/task-draft';
+import { TaskHistoryPage } from '../../pages/task-history/task-history';
 
-/**
- * Generated class for the AppTaskPage tabs.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +12,28 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'app-task.html'
 })
 export class AppTaskPage {
+  @ViewChild('tabMyTask') tabRef:Tabs;
 
-  taskListRoot = 'TaskListPage'
-  taskDraftRoot = 'TaskDraftPage'
-  taskHistoryRoot = 'TaskHistoryPage'
+  taskListRoot = TaskListPage;
+  taskDraftRoot = TaskDraftPage;
+  taskHistoryRoot =TaskHistoryPage;
 
-
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public platform: Platform,
+    public app:App
+  ) {
+    this.platform.registerBackButtonAction(() => {
+      let nav = this.app.getActiveNavs()[0];
+      let activeView = nav.getActive();
+      // Checks if can go back before show up the alert
+      if(activeView.name === 'AppTaskPage') {
+          if (nav.canGoBack()){}else{
+            this.navCtrl.setRoot(HomePage);
+          }
+          console.log("back=",activeView.name);
+      }
+    });
+  }
 
 }

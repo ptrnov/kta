@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, Platform, App,NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../../pages/home/home';
+import { getDataCustomer} from "./data";
 
-/**
- * Generated class for the TaskListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +10,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'task-list.html',
 })
 export class TaskListPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  timelinePic
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public platform: Platform,
+    public app: App
+  ) {
+    this.platform.registerBackButtonAction(() => {
+      let nav = this.app.getActiveNavs()[0];
+      let activeView = nav.getActive();
+      // Checks if can go back before show up the alert
+      if(activeView.name === 'TaskListPage') {
+          if (nav.canGoBack()){}else{
+            // this.navCtrl.push(AppformPage);
+            // this.navCtrl.setRoot(AppformPage);
+            this.app.getRootNav().setRoot(HomePage);
+          }
+          console.log("back=",activeView.name);
+      }
+    });
+    this.timelinePic=getDataCustomer;
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TaskListPage');
-  }
-
 }

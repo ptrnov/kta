@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, App, ViewController,NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../../pages/home/home';
+import { ReportStatusPage } from '../../pages/report-status/report-status';
 import { LoanPage} from '../../pages/loan/loan';
 
 @IonicPage()
@@ -28,7 +28,7 @@ export class LoanDatatambahanMessagePage {
     // this.navCtrl.removeView();
     // this.viewCtrl.dismiss();
     // this.navCtrl.pop();
-    this.app.getRootNav().setRoot(HomePage);
+    this.app.getRootNav().setRoot(ReportStatusPage);
 
   }
 }
